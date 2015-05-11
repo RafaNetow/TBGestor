@@ -10,27 +10,13 @@ using System.Windows.Forms;
 
 namespace ManagerTool
 {
-    public partial class LoginForm : Form
+    public partial class ManagerTool : Form
     {
-        public LoginForm()
+        public ManagerTool()
         {
             InitializeComponent();
         }
 
-        private void BotonLogin_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Login Complete");
-            ManagerTool mt = new ManagerTool();
-            this.Hide();
-            mt.Show();
-
-
-
-
-
-
-
-        }
+       
     }
 }
-

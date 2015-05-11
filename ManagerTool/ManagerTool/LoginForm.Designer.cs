@@ -32,8 +32,9 @@
             this.TexBoxPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TextBoxPassword = new System.Windows.Forms.TextBox();
-            this.BotonGuadar = new System.Windows.Forms.Button();
+            this.BotonLogin = new System.Windows.Forms.Button();
             this.BotonCerrar = new System.Windows.Forms.Button();
+            this.buttonCreateUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +57,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(117, 126);
-            this.label2.Name = "LabelPassword";
+            this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Password";
@@ -68,14 +69,15 @@
             this.TextBoxPassword.Size = new System.Drawing.Size(100, 20);
             this.TextBoxPassword.TabIndex = 3;
             // 
-            // BotonGuadar
+            // BotonLogin
             // 
-            this.BotonGuadar.Location = new System.Drawing.Point(120, 187);
-            this.BotonGuadar.Name = "BotonGuadar";
-            this.BotonGuadar.Size = new System.Drawing.Size(75, 23);
-            this.BotonGuadar.TabIndex = 4;
-            this.BotonGuadar.Text = "Guardar";
-            this.BotonGuadar.UseVisualStyleBackColor = true;
+            this.BotonLogin.Location = new System.Drawing.Point(120, 187);
+            this.BotonLogin.Name = "BotonLogin";
+            this.BotonLogin.Size = new System.Drawing.Size(75, 23);
+            this.BotonLogin.TabIndex = 4;
+            this.BotonLogin.Text = "Login";
+            this.BotonLogin.UseVisualStyleBackColor = true;
+            this.BotonLogin.Click += new System.EventHandler(this.BotonLogin_Click);
             // 
             // BotonCerrar
             // 
@@ -86,13 +88,23 @@
             this.BotonCerrar.Text = "Cerrar";
             this.BotonCerrar.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // buttonCreateUser
+            // 
+            this.buttonCreateUser.Location = new System.Drawing.Point(329, 13);
+            this.buttonCreateUser.Name = "buttonCreateUser";
+            this.buttonCreateUser.Size = new System.Drawing.Size(75, 71);
+            this.buttonCreateUser.TabIndex = 6;
+            this.buttonCreateUser.Text = "Create User";
+            this.buttonCreateUser.UseVisualStyleBackColor = true;
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 261);
+            this.Controls.Add(this.buttonCreateUser);
             this.Controls.Add(this.BotonCerrar);
-            this.Controls.Add(this.BotonGuadar);
+            this.Controls.Add(this.BotonLogin);
             this.Controls.Add(this.TextBoxPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TexBoxPassword);
@@ -110,8 +122,9 @@
         private System.Windows.Forms.TextBox TexBoxPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TextBoxPassword;
-        private System.Windows.Forms.Button BotonGuadar;
+        private System.Windows.Forms.Button BotonLogin;
         private System.Windows.Forms.Button BotonCerrar;
+        private System.Windows.Forms.Button buttonCreateUser;
     }
 }
 
