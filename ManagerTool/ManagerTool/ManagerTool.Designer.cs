@@ -29,68 +29,48 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Table1");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Table", new System.Windows.Forms.TreeNode[] {
+            treeNode3});
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aSasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asasToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.aSasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.asasToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trigerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.procedureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.ButtomUserImage = new System.Windows.Forms.Button();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aSasToolStripMenuItem,
-            this.aSasToolStripMenuItem1});
+            this.aSasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(792, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(809, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "Option";
             // 
             // aSasToolStripMenuItem
             // 
             this.aSasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.asasToolStripMenuItem2,
-            this.newToolStripMenuItem});
+            this.newToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.aSasToolStripMenuItem.Name = "aSasToolStripMenuItem";
             this.aSasToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.aSasToolStripMenuItem.Text = "File";
-            // 
-            // asasToolStripMenuItem2
-            // 
-            this.asasToolStripMenuItem2.Name = "asasToolStripMenuItem2";
-            this.asasToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
-            this.asasToolStripMenuItem2.Text = "asas";
-            // 
-            // aSasToolStripMenuItem1
-            // 
-            this.aSasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.asasToolStripMenuItem3});
-            this.aSasToolStripMenuItem1.Name = "aSasToolStripMenuItem1";
-            this.aSasToolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
-            this.aSasToolStripMenuItem1.Text = "ASas";
-            // 
-            // asasToolStripMenuItem3
-            // 
-            this.asasToolStripMenuItem3.Name = "asasToolStripMenuItem3";
-            this.asasToolStripMenuItem3.Size = new System.Drawing.Size(96, 22);
-            this.asasToolStripMenuItem3.Text = "asas";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tableToolStripMenuItem,
-            this.trigerToolStripMenuItem});
+            this.trigerToolStripMenuItem,
+            this.procedureToolStripMenuItem});
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newToolStripMenuItem.Text = "New";
@@ -107,15 +87,67 @@
             this.trigerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.trigerToolStripMenuItem.Text = "Triger";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
+            // procedureToolStripMenuItem
+            // 
+            this.procedureToolStripMenuItem.Name = "procedureToolStripMenuItem";
+            this.procedureToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.procedureToolStripMenuItem.Text = "Procedure";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(142, 129);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(485, 233);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = "";
+            // 
+            // ButtomUserImage
+            // 
+            this.ButtomUserImage.Location = new System.Drawing.Point(0, 62);
+            this.ButtomUserImage.Name = "ButtomUserImage";
+            this.ButtomUserImage.Size = new System.Drawing.Size(82, 61);
+            this.ButtomUserImage.TabIndex = 3;
+            this.ButtomUserImage.Text = "UserImage";
+            this.ButtomUserImage.UseVisualStyleBackColor = true;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(0, 129);
+            this.treeView1.Name = "treeView1";
+            treeNode3.Name = "NodeTableUser";
+            treeNode3.Text = "Table1";
+            treeNode4.Name = "nodeTable";
+            treeNode4.Text = "Table";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode4});
+            this.treeView1.Size = new System.Drawing.Size(121, 183);
+            this.treeView1.TabIndex = 7;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            // 
             // ManagerTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 403);
+            this.ClientSize = new System.Drawing.Size(809, 484);
+            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.ButtomUserImage);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ManagerTool";
             this.Text = "ManagerTool";
+            this.Load += new System.EventHandler(this.ManagerTool_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -127,12 +159,14 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem aSasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aSasToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem asasToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem asasToolStripMenuItem3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tableToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trigerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem procedureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button ButtomUserImage;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }

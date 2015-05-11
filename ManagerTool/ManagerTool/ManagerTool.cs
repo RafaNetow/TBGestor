@@ -17,6 +17,16 @@ namespace ManagerTool
             InitializeComponent();
         }
 
+        private void ManagerTool_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
        
     }
 }
