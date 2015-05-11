@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace ManagerTool
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
+
+       
+
+      
+        
+
+       
     }
 }
