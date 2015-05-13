@@ -27,6 +27,11 @@ namespace ManagerTool
 
         }
 
+        private void ButtonClean_Click(object sender, EventArgs e)
+        {
+            richTextBoxSQL.Clear();
+        }
+
        
     }
 }
