@@ -16,7 +16,7 @@ namespace ManagerTool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NewTable());
+            Application.Run(new LoginForm());
         }
     }
 }
