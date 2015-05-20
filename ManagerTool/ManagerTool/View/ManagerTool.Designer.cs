@@ -38,6 +38,11 @@
             this.tableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trigerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procedureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.paquetesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.procedimientosAlmacenadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.secuenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.indiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tablesspaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.richTextBoxSQL = new System.Windows.Forms.RichTextBox();
@@ -45,12 +50,10 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.buttonGo = new System.Windows.Forms.Button();
             this.ButtonClean = new System.Windows.Forms.Button();
-            this.paquetesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.procedimientosAlmacenadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.secuenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.indiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tablesspaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -84,7 +87,7 @@
             this.indiceToolStripMenuItem,
             this.tablesspaceToolStripMenuItem});
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
             // tableToolStripMenuItem
@@ -104,67 +107,6 @@
             this.procedureToolStripMenuItem.Name = "procedureToolStripMenuItem";
             this.procedureToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.procedureToolStripMenuItem.Text = "Procedure";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // richTextBoxSQL
-            // 
-            this.richTextBoxSQL.Location = new System.Drawing.Point(142, 129);
-            this.richTextBoxSQL.Name = "richTextBoxSQL";
-            this.richTextBoxSQL.Size = new System.Drawing.Size(485, 233);
-            this.richTextBoxSQL.TabIndex = 2;
-            this.richTextBoxSQL.Text = "";
-            // 
-            // ButtomUserImage
-            // 
-            this.ButtomUserImage.Location = new System.Drawing.Point(0, 62);
-            this.ButtomUserImage.Name = "ButtomUserImage";
-            this.ButtomUserImage.Size = new System.Drawing.Size(82, 61);
-            this.ButtomUserImage.TabIndex = 3;
-            this.ButtomUserImage.Text = "UserImage";
-            this.ButtomUserImage.UseVisualStyleBackColor = true;
-            // 
-            // treeView1
-            // 
-            this.treeView1.Location = new System.Drawing.Point(0, 129);
-            this.treeView1.Name = "treeView1";
-            treeNode1.Name = "NodeTableUser";
-            treeNode1.Text = "Table1";
-            treeNode2.Name = "nodeTable";
-            treeNode2.Text = "Table";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
-            this.treeView1.Size = new System.Drawing.Size(121, 183);
-            this.treeView1.TabIndex = 7;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            // 
-            // buttonGo
-            // 
-            this.buttonGo.Location = new System.Drawing.Point(645, 129);
-            this.buttonGo.Name = "buttonGo";
-            this.buttonGo.Size = new System.Drawing.Size(75, 35);
-            this.buttonGo.TabIndex = 8;
-            this.buttonGo.Text = "Go";
-            this.buttonGo.UseVisualStyleBackColor = true;
-            // 
-            // ButtonClean
-            // 
-            this.ButtonClean.Location = new System.Drawing.Point(645, 193);
-            this.ButtonClean.Name = "ButtonClean";
-            this.ButtonClean.Size = new System.Drawing.Size(75, 35);
-            this.ButtonClean.TabIndex = 9;
-            this.ButtonClean.Text = "Clean";
-            this.ButtonClean.UseVisualStyleBackColor = true;
-            this.ButtonClean.Click += new System.EventHandler(this.ButtonClean_Click);
             // 
             // paquetesToolStripMenuItem
             // 
@@ -196,11 +138,93 @@
             this.tablesspaceToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.tablesspaceToolStripMenuItem.Text = "Tablesspace";
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // richTextBoxSQL
+            // 
+            this.richTextBoxSQL.Location = new System.Drawing.Point(139, 84);
+            this.richTextBoxSQL.Name = "richTextBoxSQL";
+            this.richTextBoxSQL.Size = new System.Drawing.Size(485, 183);
+            this.richTextBoxSQL.TabIndex = 2;
+            this.richTextBoxSQL.Text = "";
+            // 
+            // ButtomUserImage
+            // 
+            this.ButtomUserImage.Location = new System.Drawing.Point(673, 291);
+            this.ButtomUserImage.Name = "ButtomUserImage";
+            this.ButtomUserImage.Size = new System.Drawing.Size(82, 61);
+            this.ButtomUserImage.TabIndex = 3;
+            this.ButtomUserImage.Text = "UserImage";
+            this.ButtomUserImage.UseVisualStyleBackColor = true;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(12, 84);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "NodeTableUser";
+            treeNode1.Text = "Table1";
+            treeNode2.Name = "nodeTable";
+            treeNode2.Text = "Table";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode2});
+            this.treeView1.Size = new System.Drawing.Size(121, 183);
+            this.treeView1.TabIndex = 7;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            // 
+            // buttonGo
+            // 
+            this.buttonGo.Location = new System.Drawing.Point(645, 129);
+            this.buttonGo.Name = "buttonGo";
+            this.buttonGo.Size = new System.Drawing.Size(75, 35);
+            this.buttonGo.TabIndex = 8;
+            this.buttonGo.Text = "Go";
+            this.buttonGo.UseVisualStyleBackColor = true;
+            this.buttonGo.Click += new System.EventHandler(this.buttonGo_Click);
+            // 
+            // ButtonClean
+            // 
+            this.ButtonClean.Location = new System.Drawing.Point(645, 193);
+            this.ButtonClean.Name = "ButtonClean";
+            this.ButtonClean.Size = new System.Drawing.Size(75, 35);
+            this.ButtonClean.TabIndex = 9;
+            this.ButtonClean.Text = "Clean";
+            this.ButtonClean.UseVisualStyleBackColor = true;
+            this.ButtonClean.Click += new System.EventHandler(this.ButtonClean_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(139, 275);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(485, 197);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.Location = new System.Drawing.Point(645, 234);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 11;
+            this.buttonExit.Text = "Exit";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // ManagerTool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 484);
+            this.Controls.Add(this.buttonExit);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.ButtonClean);
             this.Controls.Add(this.buttonGo);
             this.Controls.Add(this.treeView1);
@@ -213,6 +237,7 @@
             this.Load += new System.EventHandler(this.ManagerTool_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +263,7 @@
         private System.Windows.Forms.ToolStripMenuItem secuenciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem indiceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tablesspaceToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonExit;
     }
 }
