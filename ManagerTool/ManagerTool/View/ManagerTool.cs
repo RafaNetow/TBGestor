@@ -40,14 +40,13 @@ namespace ManagerTool
 
         private void buttonGo_Click(object sender, EventArgs e)
         {
-           String myConnectionString = "SERVER=127.0.0.1;UID=root;" +
-                "PASSWORD=;database=gestor;";
-            ConnectionData = new HandlerConnection(myConnectionString);
-          var data = ConnectionData.ConfirmationOfConnection();
+               String myConnectionString = "SERVER=127.0.0.1;UID=root;" +
+               "PASSWORD=;database=gestor;";
+               ConnectionData = new HandlerConnection(myConnectionString);
+              var data = ConnectionData.ConfirmationOfConnection();
             MessageBox.Show(data.message);
             UserData = new UserManager(ConnectionData);
-            //this.dataGridView1.DataSource = 
-                UserData.GetColumn();
+            this.dataGridView1.DataSource = UserData.GetColumn("user");
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
