@@ -46,7 +46,7 @@ namespace ManagerTool
               var data = ConnectionData.ConfirmationOfConnection();
             MessageBox.Show(data.message);
             UserData = new UserManager(ConnectionData);
-            this.dataGridView1.DataSource = UserData.GetColumn("user");
+            this.dataGridView1.DataSource = UserData.GetColumnOfTable("user");
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

@@ -23,7 +23,13 @@ namespace ManagerTool.Clases
 
 
 
-        public DataTable GetColumn(String user)
+        
+        
+        
+        
+        
+        
+        public DataTable GetColumnOfTable(String user)
         {
             var Table = new DataTable();
             string mySelectQuery =
