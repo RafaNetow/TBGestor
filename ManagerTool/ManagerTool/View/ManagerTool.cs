@@ -16,6 +16,7 @@ namespace ManagerTool
     public partial class ManagerTool : Form
     {
         public UserManager UserData;
+        private ToolsManager Tools = new ToolsManager();
 
         public HandlerConnection ConnectionData;
         public ManagerTool()
@@ -46,7 +47,7 @@ namespace ManagerTool
               var data = ConnectionData.ConfirmationOfConnection();
             MessageBox.Show(data.message);
             UserData = new UserManager(ConnectionData);
-            this.dataGridView1.DataSource = UserData.GetColumnOfTable("user");
+            this.dataGridView1.DataSource = Tools.MySqlQuery(UserData,this.richTextBoxSQL.Text);
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
