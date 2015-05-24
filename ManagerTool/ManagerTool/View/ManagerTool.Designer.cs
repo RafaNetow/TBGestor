@@ -29,9 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Table1");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Table", new System.Windows.Forms.TreeNode[] {
-            treeNode1});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Vistas");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Paquete");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Procedimientos");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Funciones");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Secuencia");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Disparadores");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Indices");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Tablespace");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aSasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -170,12 +175,31 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(12, 84);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "NodeTableUser";
-            treeNode1.Text = "Table1";
-            treeNode2.Name = "nodeTable";
-            treeNode2.Text = "Table";
+            treeNode1.Name = "nodeVista";
+            treeNode1.Text = "Vistas";
+            treeNode2.Name = "nodePaquete";
+            treeNode2.Text = "Paquete";
+            treeNode3.Name = "nodeProcedimientos";
+            treeNode3.Text = "Procedimientos";
+            treeNode4.Name = "nodeFunciones";
+            treeNode4.Text = "Funciones";
+            treeNode5.Name = "Secuencia";
+            treeNode5.Text = "Secuencia";
+            treeNode6.Name = "nodeDisparadores";
+            treeNode6.Text = "Disparadores";
+            treeNode7.Name = "nodeIndices";
+            treeNode7.Text = "Indices";
+            treeNode8.Name = "nodeTablespaces";
+            treeNode8.Text = "Tablespace";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8});
             this.treeView1.Size = new System.Drawing.Size(121, 183);
             this.treeView1.TabIndex = 7;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);

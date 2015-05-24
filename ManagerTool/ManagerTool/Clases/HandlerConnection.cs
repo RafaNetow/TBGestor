@@ -14,10 +14,12 @@ namespace ManagerTool.Clases
         public User userInfo;
         public string connectionString;
         public MySqlConnection conn;
+        
+        
         public HandlerConnection(String connectionString)
         {
             this.userInfo = new User();
-            
+                     
             this.connectionString = connectionString;
         }
 
@@ -48,6 +50,8 @@ namespace ManagerTool.Clases
             {
                 Data.message = ex.Message;
                 Data.Confirmation = false;
+                conn.Close();
+            
             }
 
             

@@ -30,7 +30,7 @@ namespace ManagerTool.Clases
                     Table.Load(myReader);
                     currentUserrData.ConnectionData.conn.Close();
                     myReader.Close();
-                   currentUserrData.ConnectionData.conn.Close();
+                   
                     return Table;
 
                 }

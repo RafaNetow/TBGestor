@@ -47,7 +47,7 @@
   <ItemGroup>
     <Compile Include="Clases\HandlerConnection.cs" />
     <Compile Include="Clases\ToolsManager.cs" />
-    <Compile Include="Entidad\UserManager.cs" />
+    <Compile Include="Clases\UserManager.cs" />
     <Compile Include="Entidad\ConnectionString.cs" />
     <Compile Include="Entidad\User.cs" />
     <Compile Include="View\CreateUser.cs">
