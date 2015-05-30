@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagerTool.Clases;
 using ManagerTool.Entidad;
+using ManagerTool.View;
 
 namespace ManagerTool
 {
@@ -52,20 +53,24 @@ namespace ManagerTool
 
             }
             var procedure = UserData.GetProcedure();
-            var TreeProcedureNode = UserData.GeTreeNode(procedure, "SPECIFIC_NAME", "procedimientos");
-            treeView1.Nodes.Add(TreeProcedureNode);
-        
-            
-           
-
-           
+            var treeProcedureNode = UserData.GeTreeNode(procedure, "SPECIFIC_NAME", "procedimientos");
+            treeView1.Nodes.Add(treeProcedureNode);
+            var functions = UserData.GetFunctions();
+            var treeFunctionsnode = UserData.GeTreeNode(functions, "SPECIFIC_NAME", "Functions");
+            treeView1.Nodes.Add(treeFunctionsnode);
+            var triggers = UserData.GetTrigger();
+            var treeTriggersNode = UserData.GeTreeNode(triggers, "TRIGGER_NAME", "Disparadores");
+            treeView1.Nodes.Add(treeTriggersNode);
+            var Views = UserData.GetView();
+            var treeViewsNode = UserData.GeTreeNode(Views, "TABLE_NAME", "Views");
+            treeView1.Nodes.Add(treeViewsNode);
            
                 //treeNode = new TreeNode("Procedimientos", x);
 
                 //               treeView1.Nodes.Add(treeNode);
             
 
-            this.dataGridView1.DataSource = procedure;
+            this.dataGridView1.DataSource = Views;
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -93,6 +98,12 @@ namespace ManagerTool
                ConnectionData.conn.Close();
         }
 
-       
+        private void trigerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewTrigger viewTrigger = new NewTrigger(this);
+            viewTrigger.Show();
+        }
+
+    
     }
 }

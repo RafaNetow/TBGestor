@@ -26,7 +26,7 @@ namespace ManagerTool.Clases
                 myReader = myCommand.ExecuteReader();
                 if (myReader.HasRows)
                 {
-                    MessageBox.Show("Alla va tu select vo");
+                    
                     Table.Load(myReader);
                     currentUserrData.ConnectionData.conn.Close();
                     myReader.Close();
